@@ -70,9 +70,9 @@ public class Product {
       }
 
       //calculate the rating for the noOfRatings......
-//      public void addRating(BigDecimal newRating){
-//            BigDecimal totalRating = rating.multiply(BigDecimal.valueOf(noOfRatings));
-//            rating = rating.add(totalRating).divide(BigDecimal.valueOf(noOfRatings));
-//            noOfRatings++;  //as the newAverageRatings gets increased so noOfRatings gets increased....
-//      }
+      public void addRating(double newRating){
+            double totalRating = rating.multiply(double.valueOf(noOfRatings));
+            rating = rating.divide(double.valueOf(noOfRatings));
+            noOfRatings++;  //as the newAverageRatings gets increased so noOfRatings gets increased....
+      }
 }
