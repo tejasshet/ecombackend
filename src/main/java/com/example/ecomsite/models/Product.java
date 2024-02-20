@@ -1,8 +1,9 @@
 package com.example.ecomsite.models;
 
 import jakarta.persistence.*;
+
 @Entity
-@Table(name = "Product")
+@Table (name = "Product")
 public class Product {
       @Id
       @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -69,10 +70,4 @@ public class Product {
             this.noOfRatings = noOfRatings;
       }
 
-      //calculate the rating for the noOfRatings......
-      public void addRating(double newRating){
-            double totalRating = rating.multiply(double.valueOf(noOfRatings));
-            rating = rating.divide(double.valueOf(noOfRatings));
-            noOfRatings++;  //as the newAverageRatings gets increased so noOfRatings gets increased....
-      }
 }
